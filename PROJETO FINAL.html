@@ -1,0 +1,84 @@
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>FoneXpress | Sobre Nós</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <main>
+      <h1>FoneXpress</h1>
+      <p>Conectando você ao mundo com qualidade e inovação</p>
+    </main>
+  </header>
+    <nav>
+    <button class="tab-link" onclick="openTab('iphone', event)">iPhone</button>
+    <button class="tab-link" onclick="openTab('samsung', event)">Samsung</button>
+    <button class="tab-link" onclick="openTab('xiaomi', event)">Xiaomi</button>
+    <button class="tab-link active" onclick="openTab('missao', event)">Missão</button>
+    <button class="tab-link" onclick="openTab('visao', event)">Visão</button>
+    <button class="tab-link" onclick="openTab('valores', event)">Valores</button>
+    <button class="tab-link" onclick="openTab('contato', event)">Contato</button>
+  </nav>
+
+  <main>
+    <section id="missao" class="tab-content active">
+      <h2>Missão</h2>
+      <p>Oferecer soluções inovadoras em tecnologia de comunicação, proporcionando aos nossos clientes produtos de alta qualidade que atendam às suas necessidades e superem suas expectativas.</p>
+    </section>
+
+    <section id="visao" class="tab-content">
+      <h2>Visão</h2>
+      <p>Ser reconhecida como a principal referência em tecnologia de comunicação no mercado nacional, destacando-se pela excelência no atendimento e pela constante inovação.</p>
+    </section>
+
+    <section id="valores" class="tab-content">
+      <h2>Valores</h2>
+      <ul>
+        <li><strong>Inovação:</strong> Buscamos constantemente novas soluções para melhor atender nossos clientes.</li>
+        <li><strong>Qualidade:</strong> Compromisso com produtos e serviços de alto padrão.</li>
+        <li><strong>Ética:</strong> Atuamos com transparência e responsabilidade.</li>
+        <li><strong>Comprometimento:</strong> Dedicação total às necessidades dos nossos clientes.</li>
+        <li><strong>Respeito:</strong> Valorizamos nossos colaboradores, clientes e parceiros.</li>
+      </ul>
+    </section>
+
+    <section id="contato" class="tab-content">
+      <h2>Contato</h2>
+      <p>Entre em contato conosco através do e-mail: <a href="mailto:contato@fonexpress.com.br">contato@fonexpress.com.br</a></p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 FoneXpress. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    function openTab(tabId, event) {
+      const contents = document.querySelectorAll('.tab-content');
+      contents.forEach(content => content.classList.remove('active'));
+
+      const buttons = document.querySelectorAll('.tab-link');
+      buttons.forEach(btn => btn.classList.remove('active'));
+
+      document.getElementById(tabId).classList.add('active');
+      event.currentTarget.classList.add('active');
+    }
+  </script>
+<section id="iphone" class="tab-content">
+  <h2>iPhone´s</h2>
+  <p>Confira nossa linha completa de iPhones, com os modelos mais recentes e os melhores preços do mercado. Tecnologia, design e desempenho em um só lugar.</p>
+</section>
+
+<section id="samsung" class="tab-content">
+  <h2>Samsung´s</h2>
+  <p>Descubra os smartphones Samsung com inovação de ponta, telas incríveis e câmeras poderosas. Temos modelos para todos os perfis.</p>
+</section>
+
+<section id="xiaomi" class="tab-content">
+  <h2>Xiaomi´s</h2>
+  <p>Explore a revolução tecnológica com os celulares Xiaomi. Alta performance, excelente custo-benefício e as últimas novidades em tecnologia.</p>
+</section>
+
+</body>
+</html>
